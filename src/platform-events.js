@@ -33,7 +33,7 @@
   var IS_IOS = ua.match(/iPad|iPhone|iPod/) && 'ontouchstart' in window;
 
   dispatcher.IS_IOS = IS_IOS;
-  scope.touchEvents.IS_IOS = IS_IOS;
+  if (scope.touchEvents != undefined) scope.touchEvents.IS_IOS = IS_IOS;
 
   dispatcher.register(document, true);
 })(window.PolymerGestures);
